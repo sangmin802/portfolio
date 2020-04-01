@@ -13,7 +13,7 @@ export default class PortDetail extends React.Component {
           <div className="pcImgWrap imgWrap">
             {pcImg.map((res, index) => {
               return (
-                <img className={`img pcImg pcImg${index}`} key={res} src={`/img/${res}`} alt={res}
+                <img className={`img pcImg pcImg${index}`} key={res} src={`/portfolio/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
                   onMouseMove={this.slideMouseMove.bind(this)}
                   onMouseUp={this.slideMouseOut.bind(this)}
@@ -27,7 +27,7 @@ export default class PortDetail extends React.Component {
           <div className="mobileImgWrap imgWrap">
             {mobileImg.map((res, index) => {
               return (
-                <img className={`img mobileImg mobileImg${index}`} key={res} src={`/img/${res}`} alt={res}
+                <img className={`img mobileImg mobileImg${index}`} key={res} src={`/portfolio/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
                   onMouseMove={this.slideMouseMove.bind(this)}
                   onMouseUp={this.slideMouseOut.bind(this)}
@@ -45,7 +45,7 @@ export default class PortDetail extends React.Component {
           <div className="pcImgWrap imgWrap">
             {pcImg.map((res, index) => {
               return (
-                <img className={`img pcImg pcImg${index}`} key={res} src={`/img/${res}`} alt={res}
+                <img className={`img pcImg pcImg${index}`} key={res} src={`/portfolio/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
                   onMouseMove={this.slideMouseMove.bind(this)}
                   onMouseUp={this.slideMouseOut.bind(this)}
@@ -63,7 +63,7 @@ export default class PortDetail extends React.Component {
           <div className="fullMobileImgWrap imgWrap">
             {mobileImg.map((res, index) => {
               return (
-                <img className={`img fullMobileImg mobileImg${index}`} key={res} src={`/img/${res}`} alt={res}
+                <img className={`img fullMobileImg mobileImg${index}`} key={res} src={`/portfolio/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
                   onMouseMove={this.slideMouseMove.bind(this)}
                   onMouseUp={this.slideMouseOut.bind(this)}
