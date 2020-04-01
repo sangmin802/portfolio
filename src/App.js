@@ -10,6 +10,8 @@ export default class App extends React.Component {
   }
   render(){
     const {isLoading, data} = this.state;
+    const mainStack = ['HTML', 'CSS', 'Vanila JavaScript', 'ECAM Script5++', 'jQuery', 'Angular2', 'React'];
+    const studying = ['React Native', 'Node.js', 'MySQL', 'PhotoShop', 'ILLustrator']
     if(isLoading){
       return (
         <div className="loading">Loading...</div>
@@ -17,6 +19,30 @@ export default class App extends React.Component {
     }
     return (
       <div className="appWrap">
+        <div className="myStack">
+          <div className="mainStack">
+            <div className="stackTitle">
+              Main Stack
+            </div>
+            {mainStack.map(res => {
+              return <span className="stack" key={res}>#{res}</span>
+            })}
+          </div>
+          <div className="studying">
+            <div className="stackTitle">
+              Studying & Sub Stack
+            </div>
+            {studying.map(res => {
+              return <span className="stack" key={res}>#{res}</span>
+            })}
+          </div>
+          <span className="studyingRecord" onClick={() => {
+            window.open('https://github.com/sangmin802');
+          }}>Studying Record → Go GIT</span>
+        </div>
+        <div className="sectionTitle">
+          Portfolio
+        </div>
         <div className="slideExp">
           <div className="dragImg">
           </div>

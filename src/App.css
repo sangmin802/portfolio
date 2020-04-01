@@ -9,8 +9,39 @@ body {
   border-radius: 10px;
   padding : 40px 0;
 }
+.appWrap .sectionTitle {
+  font-size : 36px;
+  font-weight : bold;
+  padding : 10% 5% 0;
+  border-radius : 5px;
+}
+.appWrap .myStack {
+  padding : 5% 5% 0;
+}
+.appWrap .myStack .stackTitle {
+  font-size : 30px;
+  font-weight : bold;
+  margin-bottom : 20px;
+}
+.appWrap .myStack .mainStack {
+  margin-bottom : 40px;
+}
+.appWrap .myStack .stack {
+  margin-right : 10px;
+  padding : 5px;
+  font-weight : 500;
+  border : 1px solid #ccc;
+  border-radius : 5px;
+}
+.appWrap .myStack .studyingRecord {
+  font-weight : 500;
+  display : inline-block;
+  margin-top : 40px;
+  cursor : pointer;
+}
+
 .appWrap .slideExp {
-  height : 200px;
+  height : 100px;
   position : relative;
 }
 .appWrap .slideExp .dragImg {
@@ -21,7 +52,7 @@ body {
   background-size : cover;
   background-position : right;
   left : 45%;
-  top : 100px;
+  top : 30px;
 
   animation : drag;
   animation-duration : 3s;
