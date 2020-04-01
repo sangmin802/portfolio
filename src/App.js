@@ -10,7 +10,7 @@ export default class App extends React.Component {
   }
   render(){
     const {isLoading, data} = this.state;
-    const mainStack = ['HTML', 'CSS', 'Vanila JavaScript', 'ECAM Script5++', 'jQuery', 'Angular2', 'React'];
+    const mainStack = ['HTML', 'CSS', 'Vanila JavaScript', 'ECMA Script5++', 'jQuery', 'Angular2', 'React'];
     const studying = ['React Native', 'Node.js', 'MySQL', 'PhotoShop', 'ILLustrator']
     if(isLoading){
       return (
