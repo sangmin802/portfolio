@@ -9,9 +9,9 @@
     "pc" : true,
     "mobile" : false,
     "pcImg" : [
+      "artbox3.PNG",
       "artbox1.PNG",
-      "artbox2.PNG",
-      "artbox3.PNG"
+      "artbox2.PNG"
     ],
     "desc" : [
       "local storage를 활용한 장바구니",
@@ -29,14 +29,14 @@
     "pc" : true,
     "mobile" : true,
     "pcImg" : [
+      "posco3.PNG",
       "posco1.PNG",
-      "posco2.PNG",
-      "posco3.PNG"
+      "posco2.PNG"
     ],
     "mobileImg" : [
+      "posco_m3.PNG",
       "posco_m1.PNG",
-      "posco_m2.PNG",
-      "posco_m3.PNG"
+      "posco_m2.PNG"
     ],
     "desc" : [
       "반응형 환경 구현",
@@ -53,9 +53,9 @@
     "pc" : true,
     "mobile" : false,
     "pcImg" : [
+      "drink3.PNG",
       "drink1.PNG",
-      "drink2.PNG",
-      "drink3.PNG"
+      "drink2.PNG"
     ],
     "desc" : [
       "이벤트성 페이지",
@@ -74,14 +74,14 @@
     "pc" : true,
     "mobile" : true,
     "pcImg" : [
+      "cookit3.PNG",
       "cookit1.PNG",
-      "cookit2.PNG",
-      "cookit3.PNG"
+      "cookit2.PNG"
     ],
     "mobileImg" : [
+      "cookit_m3.PNG",
       "cookit_m1.PNG",
-      "cookit_m2.PNG",
-      "cookit_m3.PNG"
+      "cookit_m2.PNG"
     ],
     "desc" : [
       "반응형 환경 구현",
@@ -99,9 +99,9 @@
     "pc" : true,
     "mobile" : false,
     "pcImg" : [
+      "flyers3.PNG",
       "flyers1.PNG",
-      "flyers2.PNG",
-      "flyers3.PNG"
+      "flyers2.PNG"
     ],
     "desc" : [
       "모바일 전단 제작 웹 어플리케이션",
@@ -118,9 +118,9 @@
     "pc" : false,
     "mobile" : true,
     "mobileImg" : [
+      "flyers_m3.PNG",
       "flyers_m1.PNG",
-      "flyers_m2.PNG",
-      "flyers_m3.PNG"
+      "flyers_m2.PNG"
     ],
     "desc" : [
       "플라이어스 앱으로 생성된 모바일 전단",
@@ -137,14 +137,14 @@
     "pc" : true,
     "mobile" : true,
     "pcImg" : [
+      "haemulhansang3.PNG",
       "haemulhansang1.PNG",
-      "haemulhansang2.PNG",
-      "haemulhansang3.PNG"
+      "haemulhansang2.PNG"
     ],
     "mobileImg" : [
+      "haemulhansang_m3.PNG",
       "haemulhansang_m1.PNG",
-      "haemulhansang_m2.PNG",
-      "haemulhansang_m3.PNG"
+      "haemulhansang_m2.PNG"
     ],
     "desc" : [
       "React-Router",
