@@ -2,9 +2,9 @@ import React from 'react';
 
 import './css/sidecss.css';
 
-export default class RightSide extends React.Component {
+export default class PortDetail extends React.Component {
   render(){
-    const {data, data : {mobile, pc, pcImg, mobileImg}} = this.props;
+    const {data, data : {mobile, pc, pcImg, mobileImg}, className} = this.props;
     let imgWrap = null;
     if(pc && mobile){
       imgWrap = 
@@ -85,7 +85,7 @@ export default class RightSide extends React.Component {
     }
 
     return(
-      <div className="portfolio rightPortfolio">
+      <div className={className}>
         <div className="contBox">
           {imgWrap}
           <div className="desc">
@@ -128,10 +128,12 @@ export default class RightSide extends React.Component {
   }
 
   count = 0;
+  mcount = 0;
   slide = false;
   mouseDown = false;
   x = null;
   slideImgaes = null;
+  prevTarget = null;
 
   slideMouseOut(e){
     if(this.slideImgaes !== null && e.type === 'mouseup'){
@@ -156,6 +158,7 @@ export default class RightSide extends React.Component {
         const target = e.target.classList.value;
         const check = e.target.classList.value.includes('pcImg');
         baseGap = check ? 200 : 50;
+        let count = check ? this.count : this.mcount;
         if(target.includes('pcImg')){
           width = document.querySelector('.pcImgWrap').clientWidth;
         }else{
@@ -168,14 +171,14 @@ export default class RightSide extends React.Component {
         let gap = this.x - e.clientX;
         if(gap > baseGap){
           this.slide = true;
-          this.slideRight(gap, width)
+          this.slideRight(gap, width, baseGap, count)
         }else if(gap < -baseGap){
           this.slide = true;
-          this.count--;
-          if(this.count === -1){
-            this.count = 2
+          count--;
+          if(count === -1){
+            count = 2
           }
-          this.slideLeft(gap, width)
+          this.slideLeft(gap, width, baseGap, count)
         }else{
           this.translate(gap, width);
         };
@@ -204,12 +207,12 @@ export default class RightSide extends React.Component {
     }, 300);
   }
 
-  slideRight(_gap, _width){
+  slideRight(_gap, _width, _baseGap, _count){
     Array.from(this.slideImgaes).map((res, index) => {
       res.classList.remove('transition');
       res.style.transform = `translate(0px)`;
       const preLeft = Number(res.style.left.replace('px', ''));
-      if(this.count === index){
+      if(_count === index){
         res.style.left = `${_width}px`;
       }else{
         res.animate([
@@ -225,17 +228,22 @@ export default class RightSide extends React.Component {
     })
     setTimeout(() => {
       this.slide = false;
-      this.count++;
-      this.count = this.count%3;
+      _count++;
+      _count = _count%3;
+      if(_baseGap === 200){
+        this.count = _count;
+      }else{
+        this.mcount = _count;
+      }
     }, 500)
   };
 
-  slideLeft(_gap, _width){
+  slideLeft(_gap, _width, _baseGap, _count){
     Array.from(this.slideImgaes).map((res, index) => {
       res.classList.remove('transition');
       res.style.transform = `translate(0px)`;
       const preLeft = Number(res.style.left.replace('px', ''));
-      if(this.count === index){
+      if(_count === index){
         res.style.left = `${-_width}px`;
       }else{
         res.animate([
@@ -251,6 +259,11 @@ export default class RightSide extends React.Component {
     })
     setTimeout(() => {
       this.slide = false;
+      if(_baseGap === 200){
+        this.count = _count;
+      }else{
+        this.mcount = _count;
+      }
     }, 500)
   };
 };

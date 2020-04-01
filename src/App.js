@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import LeftSide from './Components/LeftSide.js';
-import RightSide from './Components/RightSide.js'
+import PortDetail from './Components/PortDetail.js';
 
 export default class App extends React.Component {
   state = {
@@ -24,17 +23,13 @@ export default class App extends React.Component {
         </div>
         {data.map(res => {
           const type = res.id%2;
-          switch(type){
-            case 1 : {
-              return <LeftSide key={res.id} data={res} />
-            }
-            case 0 : {
-              return <RightSide key={res.id} data={res} />
-            }
-            default : {
-              return null;
-            }
+          let className;
+          if(type === 1){
+            className = 'portfolio';
+          }else{
+            className = 'portfolio rightPortfolio';
           }
+          return <PortDetail key={res.id} data={res} className={className} />
         })}
       </div>
     );
