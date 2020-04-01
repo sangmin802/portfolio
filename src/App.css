@@ -17,7 +17,7 @@ body {
   position : absolute;
   width : 40px;
   height : 60px;
-  background : url('/img/dragimg.png') no-repeat;
+  background : url('/portfolio/img/dragimg.png') no-repeat;
   background-size : cover;
   background-position : right;
   left : 45%;
