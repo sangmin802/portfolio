@@ -18,6 +18,10 @@ export default class App extends React.Component {
     }
     return (
       <div className="appWrap">
+        <div className="slideExp">
+          <div className="dragImg">
+          </div>
+        </div>
         {data.map(res => {
           const type = res.id%2;
           switch(type){

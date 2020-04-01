@@ -1,5 +1,48 @@
-* { box-sizing : border-box; margin : 0; padding : 0; }
-.appWrap {
-  width : 1024px;
+* { box-sizing : border-box; margin : 0; padding : 0; -webkit-user-drag : none; list-style : none; text-decoration : none; color : black; }
+body {
+  background : #eaeaea;
+}
+#root {
+  width : 1080px;
   margin : 0 auto;
+  background : white;
+  border-radius: 10px;
+  padding : 40px 0;
+}
+.appWrap .slideExp {
+  height : 200px;
+  position : relative;
+}
+.appWrap .slideExp .dragImg {
+  position : absolute;
+  width : 40px;
+  height : 60px;
+  background : url('/img/dragimg.png') no-repeat;
+  background-size : cover;
+  background-position : right;
+  left : 45%;
+  top : 100px;
+
+  animation : drag;
+  animation-duration : 3s;
+  animation-timing-function : ease-in-out;
+  animation-iteration-count : infinite;
+}
+.appWrap .slideExp .dragImg:after {
+  content : 'Drag the screen!';
+  position : absolute;
+  width : max-content;
+  left : 50px;
+  transform : rotate(-5deg);
+}
+@keyframes drag {
+  0% {
+    left : 45%;
+  }
+  50% {
+    left : 15%;
+  }
+  100% {
+    left : 15%;
+  }
 }
