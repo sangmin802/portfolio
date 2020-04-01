@@ -41,7 +41,8 @@ export default class App extends React.Component {
   }
 
   getData(){
-    fetch('/json/data.json')
+    // fetch('/json/data.json')
+    fetch('https://raw.githubusercontent.com/sangmin802/portfolio/master/public/json/data.json')
     .then(response => response.json())
     .then(data => {
       this.setState({data : data, isLoading : false});
