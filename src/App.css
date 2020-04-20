@@ -1,6 +1,7 @@
 * { box-sizing : border-box; margin : 0; padding : 0; -webkit-user-drag : none; list-style : none; text-decoration : none; color : black; }
 body {
   background : #eaeaea;
+  padding : 20px 0;
 }
 #root {
   width : 1080px;
@@ -12,8 +13,10 @@ body {
 .appWrap .sectionTitle {
   font-size : 36px;
   font-weight : bold;
-  padding : 10% 5% 0;
   border-radius : 5px;
+}
+.appWrap .padding { 
+  padding : 10% 5% 0;
 }
 .appWrap .myStack {
   padding : 5% 5% 0;
@@ -76,4 +79,9 @@ body {
   100% {
     left : 15%;
   }
+}
+
+.appWrap .contact .contactCont {
+  margin-top : 15px;
+  font-size : 20px;
 }

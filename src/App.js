@@ -38,9 +38,9 @@ export default class App extends React.Component {
           </div>
           <span className="studyingRecord" onClick={() => {
             window.open('https://github.com/sangmin802');
-          }}>Studying Record → Go GIT</span>
+          }}>Studying Record → 깃허브 보러가기</span>
         </div>
-        <div className="sectionTitle">
+        <div className="sectionTitle padding">
           Portfolio
         </div>
         <div className="slideExp">
@@ -57,6 +57,17 @@ export default class App extends React.Component {
           }
           return <PortDetail key={res.id} data={res} className={className} />
         })}
+        <div className="contact padding">
+          <div className="contactTitle sectionTitle">
+            Contact
+          </div>
+          <div className="contactCont">
+            Name : 박상민
+          </div>
+          <div className="contactCont">
+            Call : 010-3529-7158
+          </div>
+        </div>
       </div>
     );
   }
