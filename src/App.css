@@ -38,7 +38,6 @@ body {
 }
 .appWrap .myStack .studyingRecord {
   font-weight : 500;
-  display : inline-block;
   margin-top : 40px;
   cursor : pointer;
 }

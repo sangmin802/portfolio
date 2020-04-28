@@ -11,7 +11,7 @@ export default class App extends React.Component {
   render(){
     const {isLoading, data} = this.state;
     const mainStack = ['HTML', 'CSS', 'Vanila JavaScript', 'ECMA Script5++', 'jQuery', 'Angular2', 'React'];
-    const studying = ['React Native', 'Node.js', 'MySQL', 'PhotoShop', 'ILLustrator']
+    const studying = ['React Native', 'Node.js', 'MySQL', 'Express', 'Webpack/bundle', 'PhotoShop', 'ILLustrator']
     if(isLoading){
       return (
         <div className="loading">Loading...</div>
@@ -36,9 +36,12 @@ export default class App extends React.Component {
               return <span className="stack" key={res}>#{res}</span>
             })}
           </div>
-          <span className="studyingRecord" onClick={() => {
+          <div className="studyingRecord" onClick={() => {
             window.open('https://github.com/sangmin802');
-          }}>Studying Record → 깃허브 보러가기</span>
+          }}>Studying Record → 깃허브 보러가기</div>
+          <div className="studyingRecord" onClick={() => {
+            window.open('https://github.com/sangmin802/portfolio');
+          }}>포트폴리오 디렉토리로 이동하기</div>
         </div>
         <div className="sectionTitle padding">
           Portfolio
