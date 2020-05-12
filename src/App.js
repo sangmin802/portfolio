@@ -14,7 +14,10 @@ export default class App extends React.Component {
     const studying = ['React Native', 'Node.js', 'MySQL', 'Express', 'Webpack/bundle', 'RESTful API', 'PhotoShop', 'ILLustrator']
     if(isLoading){
       return (
-        <div className="loading">Loading...</div>
+        <div className="loading">
+          <div className="loadingText"></div>
+          <div className="loadingResult"></div>
+        </div>
       )
     }
     return (
@@ -75,16 +78,50 @@ export default class App extends React.Component {
     );
   }
 
-  getData(){
+  getData(_loading){
+    let count = 0;
+    const result = document.querySelector('.loadingResult');
+    let interval = () => {
+      return setInterval(() => {
+        if(count < 3){
+          result.innerHTML+='.';
+          count++;
+        }else{
+          result.innerHTML='';
+          count=0;
+        }
+      }, 200)
+    };
+    const id = interval();
     // fetch('/json/data.json')
-    fetch('https://raw.githubusercontent.com/sangmin802/portfolio/master/public/json/data.json')
-    .then(response => response.json())
-    .then(data => {
-      this.setState({data : data, isLoading : false});
-    })
+    setTimeout(() => {
+      fetch('https://raw.githubusercontent.com/sangmin802/portfolio/master/public/json/data.json')
+      .then(res => res.json())
+      .then(data => {
+        clearInterval(id);
+        result.innerHTML='<span class="loadingDone">Welcome!</span>';
+        setTimeout(() => {
+          result.innerHTML='';
+          _loading.innerHTML='';
+          this.setState({data : data, isLoading : false});
+        }, 1000)
+      })
+    }, 1500)
   }
 
   componentDidMount(){
-    this.getData();
+    let count = 0;
+    const string = 'npm install --save -dev sangmin802-portfolio';
+    const strArr = string.split('');
+    const loading = document.querySelector('.loadingText');
+    var interval = setInterval(() => {
+      if(count < strArr.length){
+        loading.innerHTML+=strArr[count];
+        count++;
+      }else{
+        clearInterval(interval)
+        this.getData(loading);
+      }
+    }, 70);
   }
 }

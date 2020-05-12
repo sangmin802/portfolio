@@ -1,14 +1,27 @@
 * { box-sizing : border-box; margin : 0; padding : 0; -webkit-user-drag : none; list-style : none; text-decoration : none; color : black; }
 body {
-  background : #eaeaea;
-  padding : 20px 0;
+  background : black;
 }
 #root {
   width : 1080px;
   margin : 0 auto;
+}
+.loading {
+  background : black;
+  height : 100vh;
+  padding-top : 60%;
+}
+.loading * {
+  color : white;
+}
+.loadingDone {
+  color : yellowgreen;
+}
+.appWrap {
   background : white;
-  border-radius: 10px;
   padding : 40px 0;
+  margin-top : 20px;
+  border-radius: 10px;
 }
 .appWrap .sectionTitle {
   font-size : 36px;
