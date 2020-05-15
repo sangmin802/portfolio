@@ -187,7 +187,7 @@
     "name" : "던파 유저검색 앱",
     "lib" : "Vanila JavaScript",
     "codeUrl" : "https://github.com/sangmin802/dnfrank",
-    "create" : "200508",
+    "create" : "200508~200514",
     "pc" : true,
     "mobile" : true,
     "pcImg" : [

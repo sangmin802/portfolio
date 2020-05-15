@@ -1,5 +1,9 @@
 .portfolio {
   margin-bottom : 80px;
+  opacity : 0;
+  transform : translateY(40px);
+  /* transition : .5s;
+  transition-timing-function : ease-in-out; */
 }
 .portfolio .contBox {
   display : flex;
@@ -102,4 +106,29 @@
 }
 .transition {
   transition : .3s;
+}
+
+.portContAni1 {
+  animation : portAni1;
+  animation-duration : .5s;
+  animation-timing-function : ease-in-out;
+  animation-fill-mode : forwards;
+}
+
+@keyframes portAni1 {
+  0% { opacity : 0; transform : translateY(40px); }
+  70% { opacity : 1; transform : translateY(0); }
+  100% { opacity : 1; transform : translateY(0); }
+}
+.portContAni2 {
+  animation : portAni2;
+  animation-duration : .5s;
+  animation-timing-function : ease-in-out;
+  animation-fill-mode : forwards;
+}
+
+@keyframes portAni2 {
+  0% { opacity : 1; transform : translateY(0); }
+  30% { opacity : 0; transform : translateY(15px); }
+  100% { opacity : 0; transform : translateY(40px); }
 }
