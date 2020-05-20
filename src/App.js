@@ -122,21 +122,23 @@ export default class App extends React.Component {
         clearInterval(interval)
         this.getData(loading);
       }
-    }, 70);
+    }, 35);
   }
 
   componentDidUpdate(){
     window.addEventListener('scroll', () => {
       const content = document.querySelectorAll('.portfolio');
       [...content].forEach((res, index) => {
-        const range = window.pageYOffset+window.innerHeight;
-        const contTop = res.offsetTop+100;
-        if(range > contTop){
-          res.classList.remove('portContAni2');
-          res.classList.add('portContAni1');
-        }else{
-          res.classList.remove('portContAni1');
-          res.classList.add('portContAni2');
+        if(index !== 0){
+          const range = window.pageYOffset+window.innerHeight;
+          const contTop = res.offsetTop+100;
+          if(range > contTop){
+            res.classList.remove('portContAni2');
+            res.classList.add('portContAni1');
+          }else{
+            res.classList.remove('portContAni1');
+            res.classList.add('portContAni2');
+          }
         }
       })
     })

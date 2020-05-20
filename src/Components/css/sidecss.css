@@ -1,6 +1,5 @@
 .portfolio {
   margin-bottom : 80px;
-  opacity : 0;
   transform : translateY(40px);
   /* transition : .5s;
   transition-timing-function : ease-in-out; */
