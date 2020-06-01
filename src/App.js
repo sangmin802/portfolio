@@ -87,8 +87,8 @@ export default class App extends React.Component {
           result.innerHTML+='.';
           count++;
         }else{
-          result.innerHTML='';
-          count=0;
+          result.innerHTML='.';
+          count=1;
         }
       }, 200)
     };
