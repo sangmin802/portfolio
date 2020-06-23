@@ -133,6 +133,7 @@ export default class App extends React.Component {
           const range = window.pageYOffset+window.innerHeight;
           const contTop = res.offsetTop+100;
           if(range > contTop){
+            this.recursiveFnc(res)
             res.classList.remove('portContAni2');
             res.classList.add('portContAni1');
           }else{
@@ -141,6 +142,26 @@ export default class App extends React.Component {
           }
         }
       })
+    })
+  }
+
+  recursiveFnc(target){
+    const child = [...target.childNodes];
+    child.forEach(res => {
+      if(res.classList){
+        if([...res.classList].includes('pcImg')){
+          const src = res.dataset.src;
+          res.src = src;
+        }else if([...res.classList].includes('mobileImg')){
+          const src = res.dataset.src;
+          res.src = src;
+        }else if([...res.classList].includes('fullMobileImg')){
+          const src = res.dataset.src;
+          res.src = src;
+        }else{
+          this.recursiveFnc(res);
+        }
+      }
     })
   }
 }
