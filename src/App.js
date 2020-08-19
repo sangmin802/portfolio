@@ -10,8 +10,9 @@ export default class App extends React.Component {
   }
   render(){
     const {isLoading, data} = this.state;
-    const mainStack = ['HTML', 'CSS', 'Vanila JavaScript', 'ECMA Script5++', 'jQuery', 'Angular2', 'React'];
-    const studying = ['React Native', 'Node.js', 'MySQL', 'Express', 'Webpack/bundle', 'RESTful API', 'PhotoShop', 'ILLustrator']
+    const mainStack = ['HTML', 'CSS', 'Vanila JavaScript', 'ECMA Script5++', 'jQuery', 'Angular2', 'React', 'Vue.js'];
+    const studying = ['React Native', 'Node.js', 'MySQL', 'Express', 'Webpack/bundle', 'RESTful API', 'PhotoShop', 'ILLustrator'];
+    console.log(data)
     if(isLoading){
       return (
         <div className="loading">

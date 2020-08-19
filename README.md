@@ -61,3 +61,10 @@ https://sangmin802.github.io/portfolio/
 * node.js 와, mysql을 통해 서버 및 db관리를 하였습니다.  
 * webpack을 통해 배포용 build파일을 만들수 있습니다.  
 * 네오플 제공 open api를 활용했습니다.  
+## TwoFastGif(Vue.js) 200717~  
+* 백엔드를 공부중인 친구와 함께 만든 웹 어플리케이션입니다.  
+* Vue-Cli를 사용한 웹 어플리케이션.  
+* Prerendering을 사용하여, 검색엔진 최적화가 되어있습니다.  
+  * 현재 Google, Naver 모두 검색 가능합니다.  
+* ES5 이상의 문법을 최대한 활용하였습니다.  
+* 반응형 환경 또한 구현되었습니다.  

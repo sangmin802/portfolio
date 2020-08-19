@@ -214,5 +214,34 @@
       "passport-session",
       "Json Web Token"
     ]
+  },
+  {
+    "id" : 9,
+    "name" : "TwoFastGif, 움짤생성기",
+    "lib" : "Vue.js",
+    "siteUrl" : "https://www.twofastgif.com/",
+    "create" : "200717~",
+    "pc" : true,
+    "mobile" : true,
+    "pcImg" : [
+      "twofastgif3.PNG",
+      "twofastgif1.PNG",
+      "twofastgif2.PNG"
+    ],
+    "mobileImg" : [
+      "twofastgif_m3.PNG",
+      "twofastgif_m1.PNG",
+      "twofastgif_m2.PNG"
+    ],
+    "desc" : [
+      "With BackEnd develpoer",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ECMA Script5++",
+      "Vue Cli",
+      "vi18n",
+      "Prerendering(SEO)"
+    ]
   }
 ]
