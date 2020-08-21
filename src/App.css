@@ -1,4 +1,12 @@
-* { box-sizing : border-box; margin : 0; padding : 0; -webkit-user-drag : none; list-style : none; text-decoration : none; color : black; }
+@font-face { 
+  font-family: 'paybooc-Bold'; 
+  font-display : swap; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') 
+  format('woff'); 
+  font-weight: normal; 
+  font-style: normal;
+}
+* { box-sizing : border-box; margin : 0; padding : 0; -webkit-user-drag : none; list-style : none; text-decoration : none; color : black; font-family : 'paybooc-Bold';}
 body {
   background : black;
 }
@@ -75,13 +83,6 @@ body {
   animation-duration : 3s;
   animation-timing-function : ease-in-out;
   animation-iteration-count : infinite;
-}
-.appWrap .slideExp .dragImg:after {
-  content : 'Drag the screen!';
-  position : absolute;
-  width : max-content;
-  left : 50px;
-  transform : rotate(-5deg);
 }
 @keyframes drag {
   0% {
