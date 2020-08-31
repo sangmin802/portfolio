@@ -220,6 +220,7 @@
     "name" : "TwoFastGif, 움짤생성기",
     "lib" : "Vue.js",
     "siteUrl" : "https://www.twofastgif.com/",
+    "codeUrl" : "https://github.com/sangmin802/twofastgif",
     "create" : "200717~",
     "pc" : true,
     "mobile" : true,
