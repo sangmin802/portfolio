@@ -39,20 +39,25 @@ export default class App extends React.Component {
               return <span className="stack" key={res}>#{res}</span>
             })}
           </div>
-          <div className="studyingRecord" onClick={() => {
-            window.open('https://github.com/sangmin802');
-          }}>Studying Record → 깃허브 보러가기</div>
-          <div className="studyingRecord" onClick={() => {
-            window.open('https://github.com/sangmin802/portfolio');
-          }}>포트폴리오 디렉토리로 이동하기</div>
+          <div className="linkBtnWrap">
+            <div className="linkBtn" onClick={() => {
+              window.open('https://github.com/sangmin802');
+            }}>깃허브</div>
+            <div className="linkBtn" onClick={() => {
+              window.open('https://github.com/sangmin802/portfolio');
+            }}>포트폴리오 디렉토리</div>
+            <div className="linkBtn" onClick={() => {
+              window.open('https://sangmin802.github.io/');
+            }}>기술 블로그</div>
+          </div>
         </div>
         <div className="sectionTitle padding">
           Portfolio
         </div>
-        <div className="slideExp">
+        {/* <div className="slideExp">
           <div className="dragImg">
           </div>
-        </div>
+        </div> */}
         {data.map(res => {
           const type = res.id%2;
           let className;
