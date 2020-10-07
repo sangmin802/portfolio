@@ -253,9 +253,9 @@
     "create" : "201007~",
     "mobile" : true,
     "mobileImg" : [
-      "loahands3.PNG",
-      "loahands1.PNG",
-      "loahands2.PNG"
+      "loahands3.png",
+      "loahands1.png",
+      "loahands2.png"
     ],
     "desc" : [
       "Android Studio",
