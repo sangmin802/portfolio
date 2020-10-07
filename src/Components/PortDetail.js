@@ -13,7 +13,7 @@ export default class PortDetail extends React.Component {
           <div className="pcImgWrap imgWrap">
             {pcImg.map((res, index) => {
               return (
-                <img className={`img pcImg pcImg${index}`} key={res} data-src={`/portfolio/img/${res}`} alt={res}
+                <img className={`img pcImg pcImg${index}`} key={res} data-src={`https://raw.githubusercontent.com/sangmin802/portfolio/master/public/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
                   onMouseMove={this.slideMouseMove.bind(this)}
                   onMouseUp={this.slideMouseOut.bind(this)}
@@ -27,7 +27,7 @@ export default class PortDetail extends React.Component {
           <div className="mobileImgWrap imgWrap">
             {mobileImg.map((res, index) => {
               return (
-                <img className={`img mobileImg mobileImg${index}`} key={res} data-src={`/portfolio/img/${res}`} alt={res}
+                <img className={`img mobileImg mobileImg${index}`} key={res} data-src={`https://raw.githubusercontent.com/sangmin802/portfolio/master/public/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
                   onMouseMove={this.slideMouseMove.bind(this)}
                   onMouseUp={this.slideMouseOut.bind(this)}
@@ -46,10 +46,10 @@ export default class PortDetail extends React.Component {
             {pcImg.map((res, index) => {
               let src = null;
               if(res.includes('artbox')){
-                src = `/portfolio/img/${res}`;
+                src = `https://raw.githubusercontent.com/sangmin802/portfolio/master/public/img/${res}`;
               }
               return (
-                <img className={`img pcImg pcImg${index}`} key={res} src={src} data-src={`/portfolio/img/${res}`} alt={res}
+                <img className={`img pcImg pcImg${index}`} key={res} src={src} data-src={`https://raw.githubusercontent.com/sangmin802/portfolio/master/public/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
                   onMouseMove={this.slideMouseMove.bind(this)}
                   onMouseUp={this.slideMouseOut.bind(this)}
@@ -67,7 +67,7 @@ export default class PortDetail extends React.Component {
           <div className="fullMobileImgWrap imgWrap">
             {mobileImg.map((res, index) => {
               return (
-                <img className={`img fullMobileImg mobileImg${index}`} key={res} data-src={`/portfolio/img/${res}`} alt={res}
+                <img className={`img fullMobileImg mobileImg${index}`} key={res} data-src={`https://raw.githubusercontent.com/sangmin802/portfolio/master/public/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
                   onMouseMove={this.slideMouseMove.bind(this)}
                   onMouseUp={this.slideMouseOut.bind(this)}
