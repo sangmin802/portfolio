@@ -244,5 +244,23 @@
       "vi18n",
       "Prerendering(SEO)"
     ]
+  },
+  {
+    "id" : 10,
+    "name" : "LostArk Hands",
+    "lib" : "Kotlin - Android",
+    "codeUrl" : "https://github.com/sangmin802/Kotlin_Android/tree/master/Portfolio/LoaHands",
+    "create" : "201007",
+    "mobile" : true,
+    "mobileImg" : [
+      "loahands3.PNG",
+      "loahands1.PNG",
+      "loahands2.PNG"
+    ],
+    "desc" : [
+      "Android Studio",
+      "Kotlin",
+      "xml"
+    ]
   }
 ]

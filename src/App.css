@@ -27,6 +27,8 @@ body {
 .loadingDone {
   color : yellowgreen;
 }
+
+/* 내용 시작 */
 .appWrap {
   background : white;
   padding : 40px 0;
@@ -37,32 +39,23 @@ body {
   font-size : 36px;
   font-weight : bold;
   border-radius : 5px;
+  margin-bottom : 30px;
 }
-.appWrap .padding { 
-  padding : 10% 5% 0;
+.appWrap .section {
+  padding : 10% 0 0 5%;
 }
-.appWrap .myStack {
-  padding : 5% 5% 0;
+
+.appWrap .section1 .stackWrap {
+  display : flex;
+  flex-wrap : wrap;
 }
-.appWrap .myStack .stackTitle {
-  font-size : 30px;
-  font-weight : bold;
-  margin-bottom : 20px;
-}
-.appWrap .myStack .mainStack {
-  margin-bottom : 40px;
-}
-.appWrap .myStack .stack {
+.appWrap .section1 .stackWrap .stack {
   margin-right : 10px;
+  margin-bottom : 10px;
   padding : 5px;
   font-weight : 500;
   border : 1px solid #888;
   border-radius : 5px;
-}
-.appWrap .myStack .studyingRecord {
-  font-weight : 500;
-  margin-top : 40px;
-  cursor : pointer;
 }
 
 .appWrap .slideExp {
@@ -96,14 +89,13 @@ body {
   }
 }
 
-.appWrap .contact .contactCont {
+.appWrap .contactCont {
   margin-top : 15px;
   font-size : 20px;
 }
 
 .linkBtnWrap {
   display : flex; 
-  margin-top : 65px;
 }
 .linkBtn {
   margin-right : 10px;

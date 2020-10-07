@@ -10,8 +10,7 @@ export default class App extends React.Component {
   }
   render(){
     const {isLoading, data} = this.state;
-    const mainStack = ['HTML', 'CSS', 'Vanila JavaScript', 'ECMA Script5++', 'jQuery', 'Angular2', 'React', 'Vue.js'];
-    const studying = ['React Native', 'Node.js', 'MySQL', 'Express', 'Webpack/bundle', 'RESTful API', 'PhotoShop', 'ILLustrator'];
+    const stack = ['HTML', 'CSS', 'Vanila JavaScript', 'ECMA Script5++', 'jQuery', 'Angular2', 'React', 'Vue.js', 'Kotlin-Android', 'React Native', 'Node.js', 'MySQL', 'Express', 'Webpack/bundle', 'RESTful API', 'PhotoShop', 'ILLustrator'];
     if(isLoading){
       return (
         <div className="loading">
@@ -22,22 +21,19 @@ export default class App extends React.Component {
     }
     return (
       <div className="appWrap">
-        <div className="myStack">
-          <div className="mainStack">
-            <div className="stackTitle">
-              Main Stack
-            </div>
-            {mainStack.map(res => {
-              return <span className="stack" key={res}>#{res}</span>
+        <div className="section1 section">
+          <div className="sectionTitle">
+            기술스택
+          </div>
+          <div className="stackWrap">
+            {stack.map(res => {
+              return <div className="stack" key={res}>#{res}</div>
             })}
           </div>
-          <div className="studying">
-            <div className="stackTitle">
-              Studying & Sub Stack
-            </div>
-            {studying.map(res => {
-              return <span className="stack" key={res}>#{res}</span>
-            })}
+        </div>
+        <div className="section2 section">
+          <div className="sectionTitle">
+            관련링크
           </div>
           <div className="linkBtnWrap">
             <div className="linkBtn" onClick={() => {
@@ -51,26 +47,28 @@ export default class App extends React.Component {
             }}>기술 블로그</div>
           </div>
         </div>
-        <div className="sectionTitle padding">
-          Portfolio
-        </div>
-        {/* <div className="slideExp">
-          <div className="dragImg">
+        <div className="section3 section">
+          <div className="sectionTitle">
+            포트폴리오
           </div>
-        </div> */}
-        {data.map(res => {
-          const type = res.id%2;
-          let className;
-          if(type === 1){
-            className = 'portfolio';
-          }else{
-            className = 'portfolio rightPortfolio';
-          }
-          return <PortDetail key={res.id} data={res} className={className} />
-        })}
-        <div className="contact padding">
-          <div className="contactTitle sectionTitle">
-            Contact
+          {/* <div className="slideExp">
+            <div className="dragImg">
+            </div>
+          </div> */}
+          {data.map(res => {
+            const type = res.id%2;
+            let className;
+            if(type === 1){
+              className = 'portfolio';
+            }else{
+              className = 'portfolio rightPortfolio';
+            }
+            return <PortDetail key={res.id} data={res} className={className} />
+          })}
+        </div>
+        <div className="section4 section">
+          <div className="sectionTitle">
+            연락처
           </div>
           <div className="contactCont">
             Name : 박상민
