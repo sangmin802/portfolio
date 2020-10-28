@@ -71,4 +71,3 @@ https://sangmin802.github.io/portfolio/
 ## LostArk Hands(Kotlin - Android) 201007~
 * 안드로이드 개발 언어인 코틀린과 코루틴을 활용하여 만든 로스트아크 유저 검색기입니다.
 * 해당 게임사에서 API를 제공하지 않아, 공식 사이트를 직접 파싱하여 필요한 데이터를 추출하여 만든 앱입니다.
-* React Hook / Redux Hook
