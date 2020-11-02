@@ -31,7 +31,18 @@ export default class App extends React.Component {
             })}
           </div>
         </div>
-        <div className="section2 section">
+        <div className="section1 section">
+          <div className="sectionTitle">
+            연락처
+          </div>
+          <div className="contactCont">
+            Name : 박상민
+          </div>
+          <div className="contactCont">
+            Call : 010-3529-7158
+          </div>
+        </div>
+        <div className="section3 section">
           <div className="sectionTitle">
             관련링크
           </div>
@@ -47,7 +58,7 @@ export default class App extends React.Component {
             }}>기술 블로그</div>
           </div>
         </div>
-        <div className="section3 section">
+        <div className="section4 section">
           <div className="sectionTitle">
             포트폴리오
           </div>
@@ -55,7 +66,7 @@ export default class App extends React.Component {
             <div className="dragImg">
             </div>
           </div> */}
-          {data.map(res => {
+          {[...data].reverse().map(res => {
             const type = res.id%2;
             let className;
             if(type === 1){
@@ -65,17 +76,6 @@ export default class App extends React.Component {
             }
             return <PortDetail key={res.id} data={res} className={className} />
           })}
-        </div>
-        <div className="section4 section">
-          <div className="sectionTitle">
-            연락처
-          </div>
-          <div className="contactCont">
-            Name : 박상민
-          </div>
-          <div className="contactCont">
-            Call : 010-3529-7158
-          </div>
         </div>
       </div>
     );
@@ -132,17 +132,15 @@ export default class App extends React.Component {
     window.addEventListener('scroll', () => {
       const content = document.querySelectorAll('.portfolio');
       [...content].forEach((res, index) => {
-        if(index !== 0){
-          const range = window.pageYOffset+window.innerHeight;
-          const contTop = res.offsetTop+100;
-          if(range > contTop){
-            this.recursiveFnc(res)
-            res.classList.remove('portContAni2');
-            res.classList.add('portContAni1');
-          }else{
-            res.classList.remove('portContAni1');
-            res.classList.add('portContAni2');
-          }
+        const range = window.pageYOffset+window.innerHeight;
+        const contTop = res.offsetTop+100;
+        if(range > contTop){
+          this.recursiveFnc(res)
+          res.classList.remove('portContAni2');
+          res.classList.add('portContAni1');
+        }else{
+          res.classList.remove('portContAni1');
+          res.classList.add('portContAni2');
         }
       })
     })

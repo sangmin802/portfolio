@@ -45,9 +45,9 @@ export default class PortDetail extends React.Component {
           <div className="pcImgWrap imgWrap">
             {pcImg.map((res, index) => {
               let src = null;
-              if(res.includes('artbox')){
-                src = `/portfolio/img/${res}`;
-              }
+              // if(res.includes('artbox')){
+              //   src = `/portfolio/img/${res}`;
+              // }
               return (
                 <img className={`img pcImg pcImg${index}`} key={res} src={src} data-src={`/portfolio/img/${res}`} alt={res}
                   onMouseDown={this.slideMouseDown.bind(this)}
