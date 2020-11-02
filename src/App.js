@@ -129,18 +129,21 @@ export default class App extends React.Component {
   }
 
   componentDidUpdate(){
+    const content = document.querySelectorAll('.portfolio');
+    this.recursiveFnc(content[0])
     window.addEventListener('scroll', () => {
-      const content = document.querySelectorAll('.portfolio');
       [...content].forEach((res, index) => {
         const range = window.pageYOffset+window.innerHeight;
         const contTop = res.offsetTop+100;
-        if(range > contTop){
-          this.recursiveFnc(res)
-          res.classList.remove('portContAni2');
-          res.classList.add('portContAni1');
-        }else{
-          res.classList.remove('portContAni1');
-          res.classList.add('portContAni2');
+        if(index!==0){
+          if(range > contTop){
+            this.recursiveFnc(res)
+            res.classList.remove('portContAni2');
+            res.classList.add('portContAni1');
+          }else{
+            res.classList.remove('portContAni1');
+            res.classList.add('portContAni2');
+          }
         }
       })
     })
