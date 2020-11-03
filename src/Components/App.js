@@ -9,6 +9,7 @@ const initalState = {
   popupBg : false,
   popupData : null,
   popupType : null,
+  pageYOffset : null,
 }
 
 export default function App(){
@@ -39,15 +40,22 @@ export default function App(){
     return () => {
       intervalBox.forEach(interval => clearInterval(interval));
     }
-  }, [])
+  }, []);
   const 
     [state, setState] = useState(initalState),
-    {projectTab, popupBg, popupData, popupType} = state,
+    {projectTab, popupBg, popupData, popupType, pageYOffset} = state,
     data = [...PORT_DATA];
   
+  useEffect(() => {
+    if(!popupBg){
+      window.scrollTo(0, pageYOffset);
+      setState({...state, pageYOffset : null})
+    }
+  }, [popupBg])
+
   let 
     appBgStyle = 'none',
-    appClassName = null,
+    appClassName = '',
     projectPop = null;
 
   if(popupBg){
@@ -101,7 +109,11 @@ export default function App(){
           })}
         </div>
       </div>
-      <div className="innerApp">
+      <div className="innerApp"
+        style={{
+          top : `${popupBg ? `-${pageYOffset}px` : ''}`
+        }}
+      >
         <div className="intro">
           <div className="myImg"></div>
           <div className="introCont textCenter rem11">
@@ -189,7 +201,7 @@ export default function App(){
             </div>
             <div className="section4Cont sectionCont">
               {
-                projectTab === 0 ? createPcProject(data, state, setState) : createMobileProject(data, state, setState)
+                projectTab === 0 ? createProject(data, state, setState, 'pc') : createProject(data, state, setState, 'mobile')
               }
             </div>
           </div>
@@ -199,20 +211,28 @@ export default function App(){
   )
 }
 
-function createPcProject(data, state, setState){
+function createProject(data, state, setState, type){
   return data
-  .filter(pro => pro.pc)
+  .filter(pro => pro[type])
   .reverse()
-  .map(pcCont => {
-    const {name, lib, pcImg} = pcCont;
+  .map((cont, index) => {
+    const {name, lib} = cont;
+    let imgWrap = null;
+    switch(type){
+      case 'pc' : imgWrap = cont.pcImg
+      break;
+      case 'mobile' : imgWrap = cont.mobileImg
+      break;
+      default : return null;
+    }
     return(
-      <div className="pcProject" key={`pc${name}`}
+      <div className={`${type}Project`} key={`${type}${name}${index}`}
         onClick={() => {
-          setState({...state, popupBg : true, popupData : pcCont, popupType : 'PC'})
+          setState({...state, popupBg : true, popupData : cont, popupType : type.toUpperCase(), pageYOffset : window.pageYOffset})
         }}
       >
         <div className="projectBg">
-          <div className="pointer">
+          <div className={`pointer${type} pointer`}>
             <img className="imgWidth" src="/portfolio/img/pointer.png" alt="pointer"/>
           </div>
           <div className="projectCont">
@@ -220,37 +240,8 @@ function createPcProject(data, state, setState){
             <div className="projectContLib rem09 textCenter">{lib}</div>
           </div>
         </div>
-        <div className="pcProjectImg">
-          <img className="imgWidth" src={`/portfolio/img/projectImg/${pcImg[1]}`} alt={name} />
-        </div>
-      </div>
-    )
-  })
-}
-
-function createMobileProject(data, state, setState){
-  return data
-  .filter(pro => pro.mobile)
-  .reverse()
-  .map((mobileCont, index) => {
-    const {name, lib, mobileImg} = mobileCont;
-    return(
-      <div className="mobileProject" key={`mobile${name}${index}`}
-        onClick={() => {
-          setState({...state, popupBg : true, popupData : mobileCont, popupType : 'MOBILE'})
-        }}
-      >
-        <div className="projectBg">
-          <div className="pointer pointerM">
-            <img className="imgWidth" src="/portfolio/img/pointer.png" alt="pointer"/>
-          </div>
-          <div className="projectCont">
-            <div className="projectContName rem1 textCenter">{name}</div>
-            <div className="projectContLib rem09 textCenter">{lib}</div>
-          </div>
-        </div>
-        <div className="mobileProjectImg">
-          <img className="imgWidth" src={`/portfolio/img/projectImg/${mobileImg[1]}`} alt={name} />
+        <div className={`${type}ProjectImg`}>
+          <img className="imgWidth" src={`/portfolio/img/projectImg/${imgWrap[1]}`} alt={name} />
         </div>
       </div>
     )

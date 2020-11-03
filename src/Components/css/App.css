@@ -27,6 +27,7 @@
   cursor : pointer;
 }
 .innerApp {
+  position : relative;
   max-width : 900px;
   min-width : 310px;
   margin :  0 auto;
@@ -175,10 +176,14 @@
 }
 .projectTabWrap {
   display : flex;
+  justify-content : center;
 }
 .projectTab {
-  margin-right : 1rem;
+  margin-right : 3.5rem;
   cursor : pointer;
+}
+.projectTab:last-child {
+  margin-right : 0;
 }
 .pcProject {
   width : 49%;
@@ -211,7 +216,7 @@
 .pointer {
   width : 10%;
 }
-.pointerM {
+.pointermobile {
   width : 20%;
 }
 

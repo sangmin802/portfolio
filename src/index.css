@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 * { box-sizing : border-box; margin : 0; padding : 0; -webkit-user-drag : none; list-style : none; text-decoration : none; color : black; font-family: 'Noto Sans KR', sans-serif; color : white;}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 body {
   background : #222;
 }
+
 .flex {display : flex;}
 .flexCol {display : flex; flex-direction: column;}
 .overflowDot {
@@ -32,6 +42,9 @@ body {
   .pcProject {
     width : 100% !important;
     margin-top : 3% !important;
+  }
+  .mobileProject {
+    width : 49% !important;
   }
 }
 @media screen and (min-width : 900px) {
