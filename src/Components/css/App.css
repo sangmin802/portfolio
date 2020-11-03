@@ -231,10 +231,19 @@
   max-height : 80%;
   left : 50%;
   top : 50%;
-  transform : translate(-50%, -50%);
+  transform : translate(-50%, -58%);
   overflow-y : scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  opacity : 0;
+
+  animation : projectPopAni;
+  animation-duration : .8s;
+  animation-fill-mode : forwards;
+}
+@keyframes projectPopAni {
+  0% {opacity : 0; transform : translate(-50%, -58%);}
+  100% {opacity : 1; transform : translate(-50%, -50%);}
 }
 .projectPop::-webkit-scrollbar {
   display: none;
