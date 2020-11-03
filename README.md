@@ -65,7 +65,7 @@ https://sangmin802.github.io/portfolio/
 * 백엔드를 공부중인 친구와 함께 만든 웹 어플리케이션입니다.  
 * Vue-Cli를 사용한 웹 어플리케이션.  
 * Prerendering을 사용하여, 검색엔진 최적화가 되어있습니다.  
-  * 현재 Google, Naver 모두 검색 가능합니다.  
+  * Google, Naver 모두 검색 가능합니다.  
 * ES5 이상의 문법을 최대한 활용하였습니다.  
 * 반응형 환경 또한 구현되었습니다.  
 ## LostArk Hands(Kotlin - Android) 201007~

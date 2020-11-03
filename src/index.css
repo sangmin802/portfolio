@@ -1,13 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* { box-sizing : border-box; margin : 0; padding : 0; -webkit-user-drag : none; list-style : none; text-decoration : none; color : black; font-family: 'Noto Sans KR', sans-serif; color : white;}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background : #222;
+}
+.flex {display : flex;}
+.flexCol {display : flex; flex-direction: column;}
+.overflowDot {
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  white-space: nowrap;
+}
+.textCenter {text-align : center;}
+.imgWidth {
+  display : block;
+  width : 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.rem09 {font-size : .9rem;}
+.rem1 {font-size : 1rem;}
+.rem11 {font-size : 1.1rem;}
+
+@media screen and (max-width : 600px) {
+  html {
+    font-size : 14px;
+  }
+  .stackDivideWrap {
+    width : 100% !important;
+  }
+  .pcProject {
+    width : 100% !important;
+    margin-top : 3% !important;
+  }
+}
+@media screen and (min-width : 900px) {
+  .projectPop {
+    width : 670px !important;
+  }
 }
