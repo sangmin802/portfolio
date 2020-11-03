@@ -7,17 +7,17 @@
   overflow-y : hidden;
 }
 .backgroundMyCoding {
+  width : 2000px;
   height : 100vh;
   position : fixed;
   z-index : -1;
 }
 .backgroundMyCoding img {
+  width : 100%;
   position : absolute;
-  height : 100%;
   transition : 4s;
 }
 .appBg {
-  width : 100%;
   height : 100vh;
   position : absolute;
   z-index : 2;

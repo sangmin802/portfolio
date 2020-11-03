@@ -32,6 +32,16 @@ body {
 .rem1 {font-size : 1rem;}
 .rem11 {font-size : 1.1rem;}
 
+@media screen and (max-width : 1024px) {
+  .backgroundMyCoding {
+    width : 1500px !important;
+  }
+}
+@media screen and (min-width : 900px) {
+  .projectPop {
+    width : 670px !important;
+  }
+}
 @media screen and (max-width : 600px) {
   html {
     font-size : 14px;
@@ -46,9 +56,7 @@ body {
   .mobileProject {
     width : 49% !important;
   }
-}
-@media screen and (min-width : 900px) {
-  .projectPop {
-    width : 670px !important;
+  .backgroundMyCoding {
+    width : 900px !important;
   }
 }
