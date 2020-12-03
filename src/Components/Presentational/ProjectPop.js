@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './css/ProjectPop.css';
+import '../css/ProjectPop.css';
 
 function ProjectPop(props){
   let
@@ -171,4 +171,4 @@ function ProjectPop(props){
   )
 }
 
-export default ProjectPop;
+export default React.memo(ProjectPop,() => (true));
