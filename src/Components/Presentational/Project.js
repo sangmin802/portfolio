@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Project({cont, type, selectProject}){
-  const {name, lib} = cont;
+  const {name, lib, refactoring} = cont;
   let imgWrap = null;
   switch(type){
     case 'pc' : imgWrap = cont.pcImg
@@ -19,6 +19,9 @@ function Project({cont, type, selectProject}){
           <img className="imgWidth" src="/portfolio/img/pointer.png" alt="pointer"/>
         </div>
         <div className="projectCont">
+          {refactoring &&
+            <div className="rem08 refactoring">리팩토링</div>
+          }
           <div className="projectContName rem1 textCenter">{name}</div>
           <div className="projectContLib rem09 textCenter">{lib}</div>
         </div>

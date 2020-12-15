@@ -220,6 +220,14 @@
 .pointermobile {
   width : 20%;
 }
+.refactoring {
+  width : fit-content;
+  margin : 0 auto;
+  border : 1px solid #eaeaea;
+  border-radius : 3px;
+  padding : .2rem .3rem;
+  color : #eaeaea;
+}
 
 /* 팝업 */
 .projectPop {
