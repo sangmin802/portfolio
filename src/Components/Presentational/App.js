@@ -137,6 +137,35 @@ function AfterDomCreated(state, setState){
   useEffect(() => {
     setState({...state, isReady : true})
   }, []);
+
+  useEffect(() => {
+    let 
+      intervalBox = [],
+      count = 0;
+    function startInterval(fun, sec){
+      fun();
+      const interval = setInterval(fun, sec*1000)
+      intervalBox.push(interval)
+      return fun();
+    }
+    startInterval(() => {
+      count++;
+      count = count % 10;
+      const els = [...document.getElementsByClassName('myCodingImg')];
+      els.forEach((el, index) => {
+        el.style.opacity = 0;
+        el.style.transform = `scale(1)`;
+        if(count === index){
+          el.style.opacity = 1;
+          el.style.transform = `scale(1.01)`;
+        }
+      })
+    }, 6);
+  
+    return () => {
+      intervalBox.forEach(interval => clearInterval(interval));
+    }
+  }, []);
 }
 
 function ReturnToBeforeHeight(popupBg, pageYOffset, resetPageYOffset){
