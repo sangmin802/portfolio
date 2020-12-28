@@ -375,6 +375,7 @@ export const PORT_DATA =
       '* React를 활용하여 만든 로스트아크 유저 검색기입니다.',
       '* 해당 게임사에서 API를 제공하지 않아, 공식 사이트를 직접 파싱하여 필요한 데이터를 추출하여 만든 앱입니다.',
       '* React-hook, Redux-hook을 사용하였습니다',
+      '* 타입스크립트가 사용되었습니다.'
     ]
   },
 ]
@@ -384,6 +385,7 @@ export const STACKS = [
    {name : 'HTML', src : 'html.png'},
    {name : 'CSS', src : 'css.png'},
    {name : 'Vanila JavaScript', src : 'javascript.png'},
+   {name : 'TypeScript', src : 'typescript.png'},
    {name : 'ECMA Script5++', src : 'ecma.PNG'},
    {name : 'jQuery', src : 'jquery.png'},
    {name : 'Angular2', src : 'angular.png'},
