@@ -188,6 +188,8 @@
 }
 .pcProject {
   width : 49%;
+  min-height : 150px;
+  background : #222;
   overflow : hidden;
   position : relative;
   margin-top : 2%;
@@ -195,6 +197,8 @@
 }
 .mobileProject {
   width : 24%;
+  min-height : 300px;
+  background : #222;
   overflow : hidden;
   position : relative;
   margin-top : 2%;
