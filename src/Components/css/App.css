@@ -170,6 +170,9 @@
 }
 
 /* section4 */
+.section4 {
+  min-height : 800px;
+}
 .section4Cont {
   display : flex;
   flex-wrap : wrap;
@@ -197,7 +200,7 @@
 }
 .mobileProject {
   width : 24%;
-  min-height : 300px;
+  max-height : 365px;
   background : #222;
   overflow : hidden;
   position : relative;
