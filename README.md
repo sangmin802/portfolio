@@ -75,3 +75,6 @@ https://sangmin802.github.io/portfolio/
 * React를 활용하여 만든 로스트아크 유저 검색기입니다.
 * 해당 게임사에서 API를 제공하지 않아, 공식 사이트를 직접 파싱하여 필요한 데이터를 추출하여 만든 앱입니다.
 * React-hook, Redux-hook
+## LostArk Hands(React) 210203~
+* 위의 앱을 Next.js버전으로 재구성하였습니다.
+* Vercel을 사용하여 배포하였습니다.

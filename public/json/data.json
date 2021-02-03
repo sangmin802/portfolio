@@ -289,5 +289,32 @@
       "React-Router",
       "Dom Parser"
     ]
+  },
+  {
+    "id" : 12,
+    "name" : "LostArk Hands - Next.js",
+    "lib" : "React",
+    "siteUrl" : "https://sangmin802.github.io/loa-hands/",
+    "codeUrl" : "https://loa-hands-next.vercel.app/",
+    "create" : "210203~",
+    "pc" : true,
+    "mobile" : true,
+    "pcImg" : [
+      "rloahands3.PNG",
+      "rloahands1.PNG",
+      "rloahands2.PNG"
+    ],
+    "mobileImg" : [
+      "rloahands_m3.PNG",
+      "rloahands_m1.PNG",
+      "rloahands_m2.PNG"
+    ],
+    "desc" : [
+      "Next.js",
+      "React-Hook",
+      "React-Redux-Hook",
+      "React-Router",
+      "Dom Parser"
+    ]
   }
 ]
