@@ -374,8 +374,39 @@ export const PORT_DATA =
     "desc" : [
       '* React를 활용하여 만든 로스트아크 유저 검색기입니다.',
       '* 해당 게임사에서 API를 제공하지 않아, 공식 사이트를 직접 파싱하여 필요한 데이터를 추출하여 만든 앱입니다.',
-      '* React-hook, Redux-hook을 사용하였습니다',
+      '* React-hook, Redux-hook을 사용하였습니다.',
       '* 타입스크립트가 사용되었습니다.'
+    ]
+  },
+  {
+    "id" : 11,
+    "name" : "LostArk Hands - Next.js",
+    "lib" : "Next && React",
+    "siteUrl" : "https://github.com/sangmin802/loa-hands-next",
+    "codeUrl" : "https://loa-hands-next.vercel.app/",
+    "create" : "210203~",
+    "pc" : true,
+    "mobile" : true,
+    "refactoring" : true,
+    "pcImg" : [
+      "rloahands3.PNG",
+      "rloahands1.PNG",
+      "rloahands2.PNG"
+    ],
+    "mobileImg" : [
+      "rloahands_m3.PNG",
+      "rloahands_m1.PNG",
+      "rloahands_m2.PNG"
+    ],
+    "used" : [
+      "React-Hook",
+      "React-Redux-Hook",
+      "React-Router",
+      "Dom Parser"
+    ],
+    "desc" : [
+      '* 이전 앱을 Next.js로 재구성하였습니다.',
+      '* Vercel로 배포되었습니다.',
     ]
   },
 ]
@@ -390,6 +421,7 @@ export const STACKS = [
    {name : 'jQuery', src : 'jquery.png'},
    {name : 'Angular2', src : 'angular.png'},
    {name : 'React & React Native', src : 'react.png'},
+   {name : 'Next.js', src : 'next.png'},
    {name : 'Vue.js', src : 'vue.png'},
   ],
   [
