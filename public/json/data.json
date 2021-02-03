@@ -293,7 +293,7 @@
   {
     "id" : 12,
     "name" : "LostArk Hands - Next.js",
-    "lib" : "React",
+    "lib" : "Next.js && React",
     "siteUrl" : "https://sangmin802.github.io/loa-hands/",
     "codeUrl" : "https://loa-hands-next.vercel.app/",
     "create" : "210203~",
