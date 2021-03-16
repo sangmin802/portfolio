@@ -1,63 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 
-* { box-sizing : border-box; margin : 0; padding : 0; -webkit-user-drag : none; list-style : none; text-decoration : none; color : black; font-family: 'Noto Sans KR', sans-serif; color : white;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-drag: none;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+}
 html::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 html {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 body {
-  background : #222;
+  background: #222;
 }
-
-.flex {display : flex;}
-.flexCol {display : flex; flex-direction: column;}
+.displayNone {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
 .overflowDot {
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   white-space: nowrap;
 }
-.textCenter {text-align : center;}
+.textCenter {
+  text-align: center;
+}
 .imgWidth {
-  display : block;
-  width : 100%;
+  display: block;
+  width: 100%;
 }
 
-.rem08 {font-size : .8rem;}
-.rem09 {font-size : .9rem;}
-.rem1 {font-size : 1rem;}
-.rem11 {font-size : 1.1rem;}
+.rem08 {
+  font-size: 0.8rem;
+}
+.rem09 {
+  font-size: 0.9rem;
+}
+.rem1 {
+  font-size: 1rem;
+}
+.rem11 {
+  font-size: 1.1rem;
+}
 
-@media screen and (max-width : 1024px) {
+@media screen and (max-width: 1024px) {
   .backgroundMyCoding {
-    width : 1800px !important;
+    width: 1800px !important;
   }
 }
-@media screen and (min-width : 900px) {
+@media screen and (min-width: 900px) {
   .projectPop {
-    width : 670px !important;
+    width: 670px !important;
   }
 }
-@media screen and (max-width : 600px) {
+@media screen and (max-width: 600px) {
   html {
-    font-size : 14px;
+    font-size: 14px;
   }
   .stackDivideWrap {
-    width : 100% !important;
+    width: 100% !important;
   }
   .pcProject {
-    width : 100% !important;
-    margin-top : 3% !important;
+    width: 100% !important;
+    margin-top: 3% !important;
   }
   .mobileProject {
-    width : 49% !important;
+    width: 49% !important;
   }
   .backgroundMyCoding {
-    width : 1500px !important;
+    width: 1500px !important;
   }
 }
