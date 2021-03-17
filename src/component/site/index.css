@@ -6,7 +6,7 @@
   position: relative;
   cursor: pointer;
 }
-.linkBtn::before {
+.section:nth-of-type(3) .linkBtn::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -15,12 +15,12 @@
   top: 4px;
   background-size: cover;
 }
-.linkBtn:first-child {
+.section:nth-of-type(3) .linkBtn:first-child {
   margin-right: 3.5rem;
 }
-.linkBtn:first-child::before {
+.section:nth-of-type(3) .linkBtn:first-child::before {
   background-image: url("/portfolio/img/git.png");
 }
-.linkBtn:last-child::before {
+.section:nth-of-type(3) .linkBtn:last-child::before {
   background-image: url("/portfolio/img/blog.png");
 }

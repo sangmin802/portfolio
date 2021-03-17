@@ -29,7 +29,6 @@ body {
 .displayFlex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .flexCol {
   display: flex;
@@ -67,7 +66,7 @@ body {
   }
 }
 @media screen and (min-width: 900px) {
-  .projectPop {
+  .dialogContent {
     width: 670px !important;
   }
 }

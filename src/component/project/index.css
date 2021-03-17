@@ -15,9 +15,11 @@
   margin-right: 0;
 }
 /*  */
+.projectsWrap {
+  justify-content: space-between;
+}
 .pcProject {
   width: 49%;
-  /* min-height: 150px; */
   background: #222;
   overflow: hidden;
   position: relative;

@@ -2,10 +2,6 @@
   position: relative;
   min-width: 310px;
 }
-.App100vh {
-  height: 100vh;
-  overflow-y: hidden;
-}
 .backgroundMyCoding {
   width: 3000px;
   height: 100vh;
@@ -25,7 +21,6 @@
   padding: 5.5rem 0.5rem 3rem 0.5rem;
 }
 /* layout */
-/* section */
 /* section */
 .section {
   margin-top: 25px;

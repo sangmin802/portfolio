@@ -1,0 +1,6 @@
+.linkBtn {
+  margin-right: 0.8rem;
+}
+.linkBtn:last-child {
+  margin-right: 0;
+}
