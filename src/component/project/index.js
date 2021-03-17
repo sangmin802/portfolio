@@ -1,10 +1,10 @@
 import { PORT_DATA } from "json/json";
 import React from "react";
-import _ from "lodash";
 import Section from "layout/section";
 import Tab from "component/tab/index";
 import Item from "./item/index";
 import TabHook from "hook/tabHook";
+import "./index.css";
 
 const Index = ({ setDialog }) => {
   const [tab, setTab] = TabHook();
@@ -18,14 +18,22 @@ const Index = ({ setDialog }) => {
           return <Tab key={tab} name={tab} setTab={setTab} />;
         })}
       </div>
-      <div className={`projectsWrap ${tab === "pc" ? "" : "displayNone"}`}>
+      <div
+        className={`projectsWrap ${
+          tab === "pc" ? "displayFlex" : "displayNone"
+        }`}
+      >
         {pc.map(cont => {
           return (
             <Item key={cont.id} cont={cont} type="pc" setDialog={setDialog} />
           );
         })}
       </div>
-      <div className={`projectsWrap ${tab === "mobile" ? "" : "displayNone"}`}>
+      <div
+        className={`projectsWrap ${
+          tab === "mobile" ? "displayFlex" : "displayNone"
+        }`}
+      >
         {mobile.map(cont => {
           return (
             <Item

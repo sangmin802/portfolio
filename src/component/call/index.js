@@ -1,6 +1,6 @@
 import React from "react";
-import _ from "lodash";
 import Section from "layout/section";
+import "./index.css";
 
 const Index = () => {
   return (

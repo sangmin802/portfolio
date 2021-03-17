@@ -1,0 +1,13 @@
+.section:nth-of-type(1) {
+  padding-top: 20px;
+}
+.section:nth-of-type(1) .sectionCont {
+  align-items: center;
+}
+.emailTitle {
+  background: #222;
+  height: fit-content;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  margin-right: 1rem;
+}

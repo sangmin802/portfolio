@@ -17,16 +17,6 @@
   position: absolute;
   transition: 4s;
 }
-.dialogBg {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-}
 .innerApp {
   position: relative;
   max-width: 900px;
@@ -34,30 +24,26 @@
   margin: 0 auto;
   padding: 5.5rem 0.5rem 3rem 0.5rem;
 }
-
-/* intro */
-.intro {
-  position: relative;
+/* layout */
+/* section */
+/* section */
+.section {
+  margin-top: 25px;
 }
-.myImg {
-  width: 150px;
-  height: 150px;
-  background: url("/portfolio/img/sangmin.jpg");
-  border-radius: 50%;
-  background-position: 50% 10%;
-  background-size: cover;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.introCont {
-  width: fit-content;
-  position: absolute;
-  left: 50%;
-  bottom: -15%;
-  transform: translate(-50%);
-  background: rgba(0, 0, 0, 0.4);
+.sectionWrap {
+  width: 100%;
   border-radius: 3px;
-  padding: 0.2rem 0.4rem;
+  padding: 0.7rem;
+  background: #444;
+}
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 10px;
+  background: #222;
+  border-radius: 3px 3px 0 0;
+}
+.sectionCont {
+  display: flex;
 }
 /* sectionMoveTabWrap */
 .sectionMoveTabWrap {
@@ -77,195 +63,4 @@
 .sectionMoveTab {
   flex-grow: 1;
   cursor: pointer;
-}
-/* section */
-.section {
-  margin-top: 25px;
-}
-.sectionWrap {
-  width: 100%;
-  border-radius: 3px;
-  padding: 0.7rem;
-  background: #444;
-}
-.sectionTitle {
-  text-align: center;
-  margin-bottom: 10px;
-  background: #222;
-  border-radius: 3px 3px 0 0;
-}
-/* section1 */
-.section1 {
-  padding-top: 20px;
-}
-.section1Cont {
-  align-items: center;
-}
-.emailTitle {
-  background: #222;
-  height: fit-content;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  margin-right: 1rem;
-}
-/* section2 */
-.section2Cont {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.stackDivideWrap {
-  width: 49%;
-  border-radius: 0 0 3px 3px;
-  margin-bottom: 2%;
-  border: 1px solid white;
-}
-.stackDivide {
-  background: #222;
-  border-radius: 3px 3px 0 0;
-  text-align: center;
-}
-.stackWrap {
-  padding: 0.2rem;
-}
-.stack {
-  width: fit-content;
-  display: flex;
-  align-items: center;
-}
-.stackImg {
-  width: 20px;
-  height: 20px;
-  background-size: 100% !important;
-  margin-right: 0.5rem;
-}
-
-/* section2 */
-.section3Cont {
-  display: flex;
-  justify-content: center;
-}
-.linkBtn {
-  position: relative;
-  cursor: pointer;
-}
-.linkBtn::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 100%;
-  top: 4px;
-  background-size: cover;
-}
-.linkBtn:first-child {
-  margin-right: 3.5rem;
-}
-.linkBtn:first-child::before {
-  background-image: url("/portfolio/img/git.png");
-}
-.linkBtn:last-child::before {
-  background-image: url("/portfolio/img/blog.png");
-}
-
-/* section4 */
-.section4 {
-  min-height: 800px;
-}
-.section4Cont {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.projectTabWrap {
-  display: flex;
-  justify-content: center;
-}
-.projectTab {
-  margin-right: 3.5rem;
-  cursor: pointer;
-}
-.projectTab:last-child {
-  margin-right: 0;
-}
-.pcProject {
-  width: 49%;
-  min-height: 150px;
-  background: #222;
-  overflow: hidden;
-  position: relative;
-  margin-top: 2%;
-  border-radius: 3px;
-}
-.mobileProject {
-  width: 24%;
-  max-height: 365px;
-  background: #222;
-  overflow: hidden;
-  position: relative;
-  margin-top: 2%;
-  border-radius: 3px;
-}
-.projectBg {
-  position: absolute;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding: 0.3rem;
-  background: rgba(0, 0, 0, 0.6);
-  transition: 0.3s;
-}
-.projectBg:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-.pointer {
-  width: 10%;
-}
-.pointermobile {
-  width: 20%;
-}
-.refactoring {
-  width: fit-content;
-  margin: 0 auto;
-  border: 1px solid #eaeaea;
-  border-radius: 3px;
-  padding: 0.2rem 0.3rem;
-  color: #eaeaea;
-}
-
-/* 팝업 */
-.projectPop {
-  position: absolute;
-  z-index: 3;
-  background: #444;
-  width: 70%;
-  min-width: 250px;
-  height: fit-content;
-  max-height: 80%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -58%);
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  opacity: 0;
-
-  animation: projectPopAni;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-@keyframes projectPopAni {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -58%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-.projectPop::-webkit-scrollbar {
-  display: none;
 }

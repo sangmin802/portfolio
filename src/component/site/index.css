@@ -1,0 +1,26 @@
+.section:nth-of-type(3) .sectionCont {
+  display: flex;
+  justify-content: center;
+}
+.linkBtn {
+  position: relative;
+  cursor: pointer;
+}
+.linkBtn::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 100%;
+  top: 4px;
+  background-size: cover;
+}
+.linkBtn:first-child {
+  margin-right: 3.5rem;
+}
+.linkBtn:first-child::before {
+  background-image: url("/portfolio/img/git.png");
+}
+.linkBtn:last-child::before {
+  background-image: url("/portfolio/img/blog.png");
+}

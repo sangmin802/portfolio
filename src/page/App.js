@@ -8,20 +8,21 @@ import Dialog from "component/dialog/index";
 import DialogHook from "hook/dialogHook";
 
 import "style/app.css";
-import "style/projectPop.css";
 
 const App = () => {
   const [dialog, setDialog] = DialogHook();
 
   return (
     <div className="App">
-      <Dialog dialog={dialog} setDialog={setDialog} />
+      {dialog && <Dialog dialog={dialog} setDialog={setDialog} />}
       <div className="innerApp">
         <Intro />
-        <Call />
-        <Stack />
-        <Site />
-        <Project setDialog={setDialog} />
+        <div className="sectionWrap">
+          <Call />
+          <Stack />
+          <Site />
+          <Project setDialog={setDialog} />
+        </div>
       </div>
     </div>
   );

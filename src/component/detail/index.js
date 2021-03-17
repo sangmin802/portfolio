@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "component/link/index";
 import SlideHook from "hook/slideHook";
+import "./index.css";
 
 function ProjectPop({ data, type }) {
   const {
@@ -61,20 +62,20 @@ function ProjectPop({ data, type }) {
         </div>
       </div>
       <div className="projectName flex projectSection">
-        <div className="projectPopTitle">이름</div>
+        <div className="projectPopTitle textCenter">이름</div>
         <div className="projectPopCont">{name}</div>
       </div>
       <div className="projectLib flex projectSection">
-        <div className="projectPopTitle">메인</div>
+        <div className="projectPopTitle textCenter">메인</div>
         <div className="projectPopCont">{lib}</div>
       </div>
       <div className="projectCreated flex projectSection">
-        <div className="projectPopTitle">제작</div>
+        <div className="projectPopTitle textCenter">제작</div>
         <div className="projectPopCont">{create}</div>
       </div>
       <div className="projectUsed flexCol projectSection2">
         <div className="projectPopTitle textCenter">기술</div>
-        <div className="projectPopCont flex">
+        <div className="projectPopCont displayFlex">
           {used.map(res => (
             <div className="used rem09" key={res}>
               {res}

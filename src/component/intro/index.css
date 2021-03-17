@@ -1,0 +1,23 @@
+.intro {
+  position: relative;
+}
+.myImg {
+  width: 150px;
+  height: 150px;
+  background: url("/portfolio/img/sangmin.jpg");
+  border-radius: 50%;
+  background-position: 50% 10%;
+  background-size: cover;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.introCont {
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  bottom: -15%;
+  transform: translate(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  padding: 0.2rem 0.4rem;
+}

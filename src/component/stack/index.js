@@ -1,7 +1,7 @@
 import React from "react";
-import _ from "lodash";
 import Section from "layout/section";
 import StackWrap from "./stackWrap/index";
+import "./index.css";
 
 const Index = () => {
   return (

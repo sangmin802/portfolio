@@ -7,7 +7,6 @@
   -webkit-user-drag: none;
   list-style: none;
   text-decoration: none;
-  color: black;
   font-family: "Noto Sans KR", sans-serif;
   color: white;
 }
@@ -27,8 +26,10 @@ body {
 .displayNone {
   display: none;
 }
-.flex {
+.displayFlex {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .flexCol {
   display: flex;

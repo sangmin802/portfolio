@@ -1,0 +1,83 @@
+.projectPop {
+  padding: 0.5rem;
+}
+/* 프로젝트 링크 */
+.projectLinkWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.projectLink {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+/* 프로젝트 
+슬라이드 이미지 */
+.projectImgpc {
+  width: 80%;
+  margin: 0 auto;
+}
+.projectImgmobile {
+  width: 40%;
+  margin: 0 auto;
+}
+.imgWrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.pcImgWrap {
+  padding-bottom: 51%;
+}
+.mobileImgWrap {
+  padding-bottom: 178%;
+}
+.slideBtn {
+  width: 5%;
+  box-sizing: content-box;
+  position: absolute;
+  padding: 0.2rem 0.3rem;
+  border-radius: 3px;
+  bottom: 6%;
+  z-index: 1;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+.prev {
+  left: 3%;
+}
+.next {
+  right: 3%;
+}
+
+.imgWrap .slideImg {
+  display: block;
+  position: absolute;
+}
+
+/* projectSection */
+.projectSection,
+.projectSection2 {
+  margin-top: 0.5rem;
+}
+.projectPopTitle {
+  background: #222;
+  padding: 0.1rem 0.3rem;
+  border-radius: 1px;
+}
+.projectSection .projectPopTitle {
+  margin-right: 0.3rem;
+}
+/* 사용스택 */
+.used {
+  width: fit-content;
+  padding: 0.2rem 0.4rem;
+}
+.projectSection2 .flex {
+  flex-wrap: wrap;
+}
+/* 상세설명 */
+.projectPopCont .dsec {
+  padding: 0.2rem 0.4rem;
+}

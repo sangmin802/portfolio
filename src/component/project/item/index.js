@@ -7,7 +7,7 @@ function Index({ cont, type, setDialog }) {
   const selectProject = useCallback(() => {
     const detail = <Detail data={cont} type={type} />;
     setDialog(detail);
-  }, [cont, type]);
+  }, [cont, type, setDialog]);
 
   const img = type === "pc" ? cont.pcImg : cont.mobileImg;
 

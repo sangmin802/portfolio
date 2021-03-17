@@ -28,12 +28,12 @@ export default () => {
   const slideLeft = useCallback(e => {
     const parent = e.target.parentElement.parentElement;
     slide("LEFT", parent);
-  });
+  }, []);
 
   const slideRight = useCallback(e => {
     const parent = e.target.parentElement.parentElement;
     slide("RIGHT", parent);
-  });
+  }, []);
 
   return { mouseDown, mouseMove, mouseOff, slideLeft, slideRight };
 };
