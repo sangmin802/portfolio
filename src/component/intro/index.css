@@ -21,3 +21,6 @@
   border-radius: 3px;
   padding: 0.2rem 0.4rem;
 }
+.introCont {
+  color: var(--colorWhite);
+}

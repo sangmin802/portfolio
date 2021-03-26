@@ -62,7 +62,7 @@
   margin-top: 0.5rem;
 }
 .projectPopTitle {
-  background: #222;
+  background: var(--color3);
   padding: 0.1rem 0.3rem;
   border-radius: 1px;
 }

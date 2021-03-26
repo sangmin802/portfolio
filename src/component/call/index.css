@@ -5,7 +5,7 @@
   align-items: center;
 }
 .emailTitle {
-  background: #222;
+  background: var(--color4);
   height: fit-content;
   padding: 0.2rem 0.4rem;
   border-radius: 3px;

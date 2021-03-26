@@ -14,13 +14,14 @@
 .projectTabWrap > div:last-child {
   margin-right: 0;
 }
-/*  */
+.projectCont * {
+  color: var(--colorWhite);
+}
 .projectsWrap {
   justify-content: space-between;
 }
 .pcProject {
   width: 49%;
-  background: #222;
   overflow: hidden;
   position: relative;
   margin-top: 2%;
@@ -30,7 +31,6 @@
   width: 24%;
   max-height: 280px;
   background: #222;
-  overflow: hidden;
   position: relative;
   margin-top: 2%;
   border-radius: 3px;
