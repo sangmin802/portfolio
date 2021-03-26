@@ -30,6 +30,7 @@
 .mobileProject {
   width: 24%;
   max-height: 280px;
+  overflow-y: hidden;
   background: #222;
   position: relative;
   margin-top: 2%;
