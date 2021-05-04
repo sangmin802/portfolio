@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { slideProps, slide } from "utility/slide";
 
 export default () => {
@@ -33,6 +33,12 @@ export default () => {
   const slideRight = useCallback(e => {
     const parent = e.target.parentElement.parentElement;
     slide("RIGHT", parent);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      slideProps.slideCount = 0;
+    };
   }, []);
 
   return { mouseDown, mouseMove, mouseOff, slideLeft, slideRight };
