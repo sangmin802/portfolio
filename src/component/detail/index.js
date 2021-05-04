@@ -35,7 +35,7 @@ function ProjectPop({ data, type }) {
           <div className="slideBtn prev">
             <img
               className="imgWidth"
-              src="/portfolio/img/prev.png"
+              src={`${process.env.PUBLIC_URL}/img/prev.png`}
               alt="prev"
               onClick={slideLeft}
             />
@@ -43,7 +43,7 @@ function ProjectPop({ data, type }) {
           <div className="slideBtn next">
             <img
               className="imgWidth"
-              src="/portfolio/img/next.png"
+              src={`${process.env.PUBLIC_URL}/img/next.png`}
               alt="next"
               onClick={slideRight}
             />
@@ -53,7 +53,7 @@ function ProjectPop({ data, type }) {
               <img
                 className={`${type}Img img${index} imgWidth slideImg`}
                 key={res}
-                src={`/portfolio/img/projectImg/${res}`}
+                src={`${process.env.PUBLIC_URL}/img/projectImg/${res}`}
                 style={{ left: (index - 1) * 100 + "%" }}
                 alt={res}
               />

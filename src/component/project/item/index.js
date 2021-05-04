@@ -17,7 +17,7 @@ function Index({ cont, type, setDialog }) {
         <div className={`pointer${type} pointer`}>
           <img
             className="imgWidth"
-            src="/portfolio/img/pointer.png"
+            src={`${process.env.PUBLIC_URL}/img/pointer.png`}
             alt="pointer"
           />
         </div>
@@ -30,7 +30,7 @@ function Index({ cont, type, setDialog }) {
       <div className={`${type}ProjectImg`}>
         <img
           className="imgWidth"
-          src={`/portfolio/img/projectImg/${img[1]}`}
+          src={`${process.env.PUBLIC_URL}/img/projectImg/${img[1]}`}
           alt={name}
         />
       </div>
